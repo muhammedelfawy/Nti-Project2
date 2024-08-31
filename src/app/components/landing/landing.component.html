@@ -1,0 +1,168 @@
+<style>
+    @media (max-width:768px) {
+        .img {
+            display: none;
+        }
+
+        .text {
+            text-align: center !important;
+            width: 100% !important;
+            margin-top: 0 !important;
+        }
+
+        .text h6 {
+            text-align: start;
+            font-size: 15px;
+            padding-left: 20px;
+        }
+
+
+        .text p {
+            text-align: justify;
+            font-size: 15px !important;
+            line-height: 30px;
+            margin: -10px 0 0 !important;
+        }
+
+        .typed_animation1::before {
+            font-size: 30px;
+
+        }
+
+        #position {
+            margin: 0 0 30px !important;
+            font-size: 25px;
+            text-align: center !important;
+        }
+
+        #name {
+            margin-top: -15px !important;
+        }
+
+
+
+        @keyframes move2 {
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .clip::after {
+            clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 0%);
+            animation: down 2s both;
+            backdrop-filter: blur(2px);
+        }
+
+        @keyframes down {
+            to {
+                clip-path: polygon(0% 0%, 0% 35%, 159% 0%, 0% 0%);
+            }
+        }
+
+        .buttons a {
+            font-size: 10px;
+        }
+
+        .buttons button {
+            font-size: 12px;
+        }
+
+        .popup {
+            width: 100% !important;
+            margin-top: 50px;
+            animation: toRight 1s both;
+            transform: translatex(50%);
+            font-size: 20px;
+            height: fit-content;
+            padding: 20px 0;
+        }
+
+        @keyframes toRight {
+            to {
+                transform: translatex(-50%);
+            }
+        }
+
+        .st {
+            top: 30px;
+            color: #fff;
+        }
+    }
+</style>
+
+<div *ngIf="popup" class="popup">
+    <i class="fa-solid fa-xmark fs-2  position-absolute " (click)="popup=false"></i>
+    <div class="form">
+        <h2 class="text-center h1  ">PROJECT INFO</h2>
+        <form class="w-75 mx-auto" [formGroup]="hireForm" (submit)="handelHireForm(hireForm)">
+
+            <label for="" class="text-light fw-normal fs-5 mb-1 ps-2">Client Name :</label>
+            <input formControlName="userName" type="text" class=" form-control mb-2" placeholder="enter ur name">
+
+            <label for="" class="text-light fw-normal fs-5 mb-1 ps-2">E-mail :</label>
+            <input formControlName="email" type="email" class=" form-control mb-2" placeholder="enter ur e-mail">
+
+            <label for="" class="text-light fw-normal fs-5 mb-1 ps-2">Country :</label>
+            <input formControlName="country" type="text" class=" form-control mb-2" placeholder="enter ur country">
+
+            <label for="" class="text-light fw-normal fs-5 mb-1 ps-2">Project Details
+                :</label>
+            <textarea type="text" formControlName="details" class=" form-control mb-2"
+                placeholder="enter Project details" height="60px"></textarea>
+            <button type="submit" class="btn btn-dark  d-block mx-auto w-25 mt-4"> Send</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="media-img">.</div>
+    <div class=" mt-5 d-flex justify-content-between align-items-center clip">
+        <div class="text w-50 mt-2 ">
+            <h6 class="text-light">Hello 👋 my name is</h6>
+            <h1 id="name" class=" text-light h1  text-uppercase"> <span class="text-light typed_animation1"></span>
+            </h1>
+            <h1 id="position" class=" text-end text-purple typed_animation2 "></h1>
+            <p class=" text-gray fs-4 fw-normal mt-4">
+                During these <span class="text-light fw-bold">1 years</span>
+                as <span class="text-light fw-bold"> Front-End Software Engineer</span> . My role has
+                extended beyond coding to effective communication with various departments, to define new features
+                and spearheading the development of new apps.
+            </p>
+            <div class="buttons d-flex justify-content-center align-items-center mt-5">
+
+                <a href="assets/Mohamed elfawy CV - Front end.pdf" download="Mohamed elfawy CV - Front end.pdf"
+                    class="Btn text-decoration-none me-5 ">
+                    <span class=" d-block me-4 tr">Dawnload cv</span>
+                    <i class="fa-solid fa-download ms-3 "></i>
+                </a>
+
+                <button class="button" (click)="showPopup()">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+
+
+                    <div class="text">
+                        Hire Me
+                    </div>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="img w-50  text-end">
+            <img class="" src="assets/xc.jpg" alt="">
+        </div>
+    </div>
+    <i class="fas fa-angle-double-down fa-2x  position-relative start-50 st"></i>
+
+</div>

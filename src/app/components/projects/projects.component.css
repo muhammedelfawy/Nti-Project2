@@ -1,0 +1,17 @@
+.project {
+    width: 50%;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+}
+
+.details {
+    margin-top: -20px;
+    z-index: 1;
+}
+
+@media (max-width:768px) {
+    .projects {}
+}

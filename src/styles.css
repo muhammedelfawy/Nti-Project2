@@ -1,0 +1,148 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+    --bg-mainColor: #0C0C0D;
+    --bg-secondaryColor: #131313;
+    --text-purple: #B292FF;
+    --text-gray: #6F6F6F;
+    --header-height: 3rem;
+    /*======= Colors =======*/
+    /* Change Favorite color */
+    --hue-color: 240;
+
+    /*========= HSL Color mode =========*/
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========= Font and typography ===========*/
+    --body-font: "Poppins", sans-serif;
+
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*=========== Font weight ==========*/
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*============ Margin Bottom ===========*/
+    /* .25rem = 4px, .5rem=8px, .75rem = 12px*/
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*============== z index =============*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+
+.bg-purple {
+    background-color: blueviolet;
+}
+
+.bg-mainColor {
+    background-color: var(--bg-mainColor);
+}
+
+.section {
+    padding: 2rem 0 4rem;
+}
+
+
+.bg-secondaryColor {
+    background-color: var(--bg-secondaryColor);
+}
+
+.bg {
+
+    background-image: url("assets/background.svg");
+    background-size: cover;
+
+}
+
+.bg2 {
+    background-image: url("assets/About\ me2.png");
+    background-size: cover;
+
+}
+
+.title h1:first-of-type {
+    font-family: "Russo One", sans-serif;
+    width: fit-content;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+.title h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: blueviolet;
+}
+
+.project-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: blueviolet;
+}
+
+.text-purple {
+    color: var(--text-purple);
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+.fit {
+    width: fit-content;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 50% !important;
+    }
+}
